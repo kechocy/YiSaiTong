@@ -6,12 +6,12 @@
 
 ## 编译
 ```bash
-cd main && go build -o ../dist/Acrobat.exe main.go
-cd ../unlock && go build -o ../dist/Unlock.exe main.go
+cd main && go build -ldflags "-H windowsgui" -o ../dist/Acrobat.exe main.go
+cd ../unlock && go build -ldflags "-H windowsgui" -o ../dist/Unlock.exe main.go
 
 ```
 
-## 使用说明
+## 使用
 目前仅针对 .pdf .docx .doc .xlsx .xls .pptx .ppt 格式可解密。
 
 第一次运行系统可能会进行病毒扫描，导致解密时间较长。
